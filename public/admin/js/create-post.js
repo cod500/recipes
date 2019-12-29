@@ -17,7 +17,7 @@ createPost.addEventListener('submit', (e) =>{
     data.append('description', text.substring(0, text.indexOf('.') +1));
     data.append('imageFile', imageFile.files[0])
 
-        fetch('http://localhost:4000/posts', {
+        fetch('/posts', {
             method: 'POST',
             body: data
         }).then((response) =>{

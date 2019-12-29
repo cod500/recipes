@@ -8,7 +8,7 @@
     articlesBlock.addEventListener ('click', async (e) =>{
         if(e.target.classList.contains('btn-edit')){
             id = e.target.parentNode.parentNode.querySelector('.id').value;
-            let postInfo = await fetch('http://localhost:4000/posts/' + id)
+            let postInfo = await fetch('/posts/' + id)
             .then((response) => {
                 return response.json()
             })
@@ -31,7 +31,7 @@
 
     updateForm.addEventListener('submit', (e) =>{
         e.preventDefault();
-        fetch('http://localhost:4000/posts/' + id, {
+        fetch('/posts/' + id, {
             method: 'PUT',
             headers: {
                 'Content-Type' :'application/json'

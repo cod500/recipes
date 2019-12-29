@@ -3,7 +3,7 @@ let emailRequestForm = document.querySelector('.email-request-form')
 emailRequestForm.addEventListener('submit', (e) =>{
     e.preventDefault();
 
-    fetch('http://localhost:4000/emails', {
+    fetch('/emails', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
